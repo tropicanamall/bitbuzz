@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitbuZz 비트버즈 - YouTube & TikTok Shorts 편집 서비스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-roman-min.css');
+        }
+        body {
+            font-family: 'Poppins', 'Pretendard', sans-serif;
+        }
+        h1, h2, .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .bg-bitbuzz-blue { background-color: #1e3a8a; }
+        .bg-bitbuzz-yellow { background-color: #fbbf24; }
+        .text-bitbuzz-blue { color: #1e3a8a; }
+        .text-bitbuzz-yellow { color: #fbbf24; }
+        .border-bitbuzz-blue { border-color: #1e3a8a; }
+        .border-bitbuzz-yellow { border-color: #fbbf24; }
+        .logo-icon {
+            display: inline-flex;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+            background-color: #1e3a8a;
+            border-radius: 0.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" id="nav-main" class="flex items-center">
+                <div class="logo-icon">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 23.3333V14.1667H3.5L13.5 0.5V9.66667H21L11 23.3333Z" fill="#fbbf24"/>
+                    </svg>
+                </div>
+                <span class="orbitron text-2xl font-bold text-bitbuzz-blue">BitbuZz</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" id="nav-services" class="text-gray-600 hover:text-bitbuzz-blue transition-colors">서비스</a>
+                <a href="#" id="nav-order" class="text-gray-600 hover:text-bitbuzz-blue transition-colors">주문하기</a>
+                <a href="#" id="nav-admin" class="text-gray-600 hover:text-bitbuzz-blue transition-colors">관리자</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-bitbuzz-blue transition-colors focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2 transition-all duration-300">
+            <a href="#" id="mobile-nav-services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">서비스</a>
+            <a href="#" id="mobile-nav-order" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">주문하기</a>
+            <a href="#" id="mobile-nav-admin" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">관리자</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main Page Content -->
+        <div id="main-content">
+            <!-- Hero Section -->
+            <section class="bg-bitbuzz-blue text-white py-20 md:py-32">
+                <div class="container mx-auto px-4 text-center">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-bitbuzz-blue flex items-center justify-center border-2 border-white">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 23.3333V14.1667H3.5L13.5 0.5V9.66667H21L11 23.3333Z" fill="#fbbf24"/>
+                            </svg>
+                        </div>
+                        <h1 class="orbitron text-4xl md:text-6xl font-extrabold tracking-tight animate-fade-in-up">BitbuZz 비트버즈</h1>
+                    </div>
+                    <p class="poppins text-xl md:text-2xl font-light mb-6">전문 YouTube & TikTok Shorts 편집 서비스</p>
+                    <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8">말레이시아 기반 전문 편집팀이 빠르고 고품질로 쇼츠를 제작해드립니다.</p>
+                    <a href="#order-form" class="inline-block bg-bitbuzz-yellow text-bitbuzz-blue font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">지금 바로 시작하기</a>
+                </div>
+            </section>
+    
+            <!-- Innovation Section -->
+            <section class="py-16 md:py-24 bg-white" id="services">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-bitbuzz-blue mb-4 leading-tight">7,500원으로 4배 효과를 내는<br>완전히 새로운 영상 제작 시스템</h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">한국 프리랜서 반값으로 영상 만들고 3개 채널에 더 올려서 추가수익 확장</p>
+                </div>
+            </section>
+    
+            <!-- Pricing Comparison -->
+            <section class="bg-gray-100 py-16 md:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg border-2 border-red-300 transform transition-all duration-500 hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-times-circle text-red-500 text-3xl mr-3"></i>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-700">기존 한국 서비스</h3>
+                            </div>
+                            <p class="text-4xl md:text-5xl font-extrabold text-red-500 mb-2">₩15,000</p>
+                            <p class="text-gray-500">영상 1개당</p>
+                            <ul class="text-gray-600 mt-6 space-y-2">
+                                <li><i class="fas fa-arrow-right text-red-400 mr-2"></i>높은 비용</li>
+                                <li><i class="fas fa-arrow-right text-red-400 mr-2"></i>단일 플랫폼 활용</li>
+                                <li><i class="fas fa-arrow-right text-red-400 mr-2"></i>관리 부담 존재</li>
+                            </ul>
+                        </div>
+                        <div class="bg-bitbuzz-blue text-white p-8 md:p-12 rounded-2xl shadow-xl transform transition-all duration-500 hover:scale-105 relative">
+                            <div class="absolute -top-4 -right-4 bg-bitbuzz-yellow text-bitbuzz-blue text-sm font-bold py-2 px-4 rounded-full shadow-lg">50% 절약!</div>
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-check-circle text-green-300 text-3xl mr-3"></i>
+                                <h3 class="text-2xl md:text-3xl font-bold">BitbuZz 서비스</h3>
+                            </div>
+                            <p class="text-4xl md:text-5xl font-extrabold text-bitbuzz-yellow mb-2">₩7,500</p>
+                            <p class="text-gray-300">영상 1개당 (최소 4개부터)</p>
+                            <ul class="mt-6 space-y-2">
+                                <li><i class="fas fa-arrow-right text-green-300 mr-2"></i><span class="font-bold">혁신적인 가격</span> (한국 대비 50% 저렴)</li>
+                                <li><i class="fas fa-arrow-right text-green-300 mr-2"></i><span class="font-bold">4배 멀티플</span> 시스템</li>
+                                <li><i class="fas fa-arrow-right text-green-300 mr-2"></i><span class="font-bold">수익 리커버</span> 가능</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center text-xl md:text-2xl font-bold text-gray-700">
+                        <p>동일 비용으로 <span class="text-bitbuzz-blue">400% 더 많은 가치</span> 창출!</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- 4x Multiplier System -->
+            <section class="py-16 md:py-24 bg-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">🎯 4배 멀티플 활용 시스템</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">하나의 영상으로 말레이시아 YouTube 자동업로드 + 말레이시아 TikTok, 한국 YouTube, TikTok 동시 수익창출</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-gray-100 p-6 rounded-2xl shadow-md border-t-4 border-bitbuzz-blue relative transform hover:scale-105 transition-all duration-300">
+                            <div class="absolute -top-3 right-3 bg-red-500 text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg"><i class="fas fa-fire"></i> 편집자 직접!</div>
+                            <i class="fab fa-youtube text-red-600 text-4xl mb-4"></i>
+                            <h4 class="text-xl font-semibold mb-2">말레이시아 YouTube</h4>
+                            <p class="text-gray-600 text-sm">편집자 직접 업로드<br>현지화 TTS, 자막 적용<br>애드센스 + 음원 수익<br>7,500원 리커버 가능</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-2xl shadow-md border-t-4 border-black transform hover:scale-105 transition-all duration-300">
+                            <i class="fab fa-tiktok text-black text-4xl mb-4"></i>
+                            <h4 class="text-xl font-semibold mb-2">말레이시아 TikTok</h4>
+                            <p class="text-gray-600 text-sm">고객이 캡컷 파일로 직접 작업<br>현지 계정 활용<br>바이럴 가능성 극대화</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-2xl shadow-md border-t-4 border-bitbuzz-blue transform hover:scale-105 transition-all duration-300">
+                            <i class="fab fa-youtube text-red-600 text-4xl mb-4"></i>
+                            <h4 class="text-xl font-semibold mb-2">한국 YouTube</h4>
+                            <p class="text-gray-600 text-sm">고객이 캡컷 파일로 직접 작업<br>한글 번역 각색<br>기존 채널에 업로드</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-2xl shadow-md border-t-4 border-black transform hover:scale-105 transition-all duration-300">
+                            <i class="fab fa-tiktok text-black text-4xl mb-4"></i>
+                            <h4 class="text-xl font-semibold mb-2">한국 TikTok</h4>
+                            <p class="text-gray-600 text-sm">고객이 캡컷 파일로 직접 작업<br>한국어 로컬라이제이션<br>국내 TikTok 시장 공략</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Key Advantages -->
+            <section class="py-16 md:py-24 bg-gray-100">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">핵심 장점</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-bitbuzz-yellow transform hover:scale-105 transition-all duration-300">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-tasks text-bitbuzz-blue text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">관리 부담 ZERO</h3>
+                            <p class="text-gray-600">개별 프리랜서 관리부터 소통까지<br>모든 과정을 비트버즈가 대행합니다.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-bitbuzz-yellow transform hover:scale-105 transition-all duration-300">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-upload text-bitbuzz-blue text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">편집자 직접 업로드</h3>
+                            <p class="text-gray-600">말레이시아 현지 YouTube 채널에<br>담당 편집자가 직접 업로드하여<br>최적의 현지화를 보장합니다.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-bitbuzz-yellow transform hover:scale-105 transition-all duration-300">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-sack-dollar text-bitbuzz-blue text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">수익 리커버</h3>
+                            <p class="text-gray-600">YouTube 애드센스 및 음원 수익으로<br>영상 제작비를 충분히 회수할 수<br>있도록 설계되었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Process Section -->
+            <section class="py-16 md:py-24 bg-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">작업 프로세스</h2>
+                    <div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-8 lg:space-x-12">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-bitbuzz-blue text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mb-4">1</div>
+                            <p class="font-semibold text-lg text-gray-700">고품질 편집</p>
+                        </div>
+                        <i class="fas fa-arrow-down md:hidden text-gray-400"></i>
+                        <i class="fas fa-arrow-right hidden md:inline-block text-gray-400"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-bitbuzz-blue text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mb-4">2</div>
+                            <p class="font-semibold text-lg text-gray-700">현지화 작업</p>
+                        </div>
+                        <i class="fas fa-arrow-down md:hidden text-gray-400"></i>
+                        <i class="fas fa-arrow-right hidden md:inline-block text-gray-400"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-bitbuzz-blue text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mb-4 relative">
+                                3
+                                <span class="absolute -top-2 -right-2 bg-bitbuzz-yellow text-bitbuzz-blue text-xs font-bold p-1 rounded-full"><i class="fas fa-fire"></i> 핵심!</span>
+                            </div>
+                            <p class="font-semibold text-lg text-gray-700 text-center">담당자 직접 업로드</p>
+                        </div>
+                        <i class="fas fa-arrow-down md:hidden text-gray-400"></i>
+                        <i class="fas fa-arrow-right hidden md:inline-block text-gray-400"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-bitbuzz-blue text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mb-4">4</div>
+                            <p class="font-semibold text-lg text-gray-700">프로젝트 공유</p>
+                        </div>
+                        <i class="fas fa-arrow-down md:hidden text-gray-400"></i>
+                        <i class="fas fa-arrow-right hidden md:inline-block text-gray-400"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-bitbuzz-blue text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mb-4">5</div>
+                            <p class="font-semibold text-lg text-gray-700">3배 활용</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Service Scope -->
+            <section class="py-16 md:py-24 bg-gray-100">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">서비스 범위</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-green-500">
+                            <h3 class="text-2xl font-bold text-gray-700 mb-4 flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>제공 가능 서비스</h3>
+                            <ul class="space-y-3 text-lg text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>유통형 영상 (이미 제작된 영상을 편집)</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>템플릿형 영상 (고정된 템플릿에 소스 삽입)</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>언어 변환 서비스 (TTS, 자막, 더빙 등)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-red-500">
+                            <h3 class="text-2xl font-bold text-gray-700 mb-4 flex items-center"><i class="fas fa-times-circle text-red-500 mr-3"></i>제공 불가능 서비스</h3>
+                            <ul class="space-y-3 text-lg text-gray-600">
+                                <li><i class="fas fa-times text-red-500 mr-2"></i>창작형 영상 (아이디어부터 기획하는 영상)</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i>@형 영상 (전문적이고 고퀄리티 영상)</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i>소스 영상 직접 제공 (제작 전 고객님께서 소스를 찾아주셔야 합니다)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Admin Page Content -->
+        <div id="admin-content" class="hidden">
+            <section class="bg-gray-100 py-16 md:py-24">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">관리자 대시보드</h2>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <p class="text-gray-600 mb-6">아래는 Firebase에 저장된 주문 목록입니다. 사용자 ID: <span id="admin-user-id" class="font-mono text-xs">...</span></p>
+                        <div class="mb-4 flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0">
+                            <input type="text" id="order-search" placeholder="주문자 이름 또는 이메일 검색" class="w-full md:w-1/3 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue">
+                            <select id="status-filter" class="w-full md:w-auto px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue">
+                                <option value="all">전체 상태</option>
+                                <option value="대기중">대기중</option>
+                                <option value="진행중">진행중</option>
+                                <option value="완료됨">완료됨</option>
+                            </select>
+                        </div>
+                        <div id="orders-list" class="space-y-4">
+                            <!-- Orders will be dynamically loaded here -->
+                            <div class="text-center text-gray-500 py-10">
+                                <i class="fas fa-spinner fa-spin text-4xl mb-2"></i>
+                                <p>주문 목록을 불러오는 중입니다...</p>
+                            </div>
+                        </div>
+                        <div id="pagination-controls" class="flex justify-center mt-6">
+                            <!-- Pagination buttons will be here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Order Form Section -->
+        <div id="order-form-content">
+            <section class="py-16 md:py-24 bg-bitbuzz-blue text-white" id="order-form">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">주문하기</h2>
+                    <div class="bg-white text-gray-800 p-8 md:p-12 rounded-2xl shadow-xl max-w-3xl mx-auto">
+                        <form id="orderForm" novalidate>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="customer_name" class="block mb-2 font-semibold">고객명 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="customer_name" name="customer_name" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required>
+                                    <p class="text-red-500 text-sm mt-1 hidden" id="error-customer_name">고객명을 입력해주세요.</p>
+                                </div>
+                                <div>
+                                    <label for="customer_email" class="block mb-2 font-semibold">이메일 <span class="text-red-500">*</span></label>
+                                    <input type="email" id="customer_email" name="customer_email" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required>
+                                    <p class="text-red-500 text-sm mt-1 hidden" id="error-customer_email">유효한 이메일 주소를 입력해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="customer_contact" class="block mb-2 font-semibold">카카오톡 ID <span class="text-red-500">*</span></label>
+                                <input type="text" id="customer_contact" name="customer_contact" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required>
+                                <p class="text-red-500 text-sm mt-1 hidden" id="error-customer_contact">카카오톡 ID를 입력해주세요.</p>
+                            </div>
+                            <div class="mb-6">
+                                <label for="video_title" class="block mb-2 font-semibold">영상 제목 <span class="text-red-500">*</span></label>
+                                <input type="text" id="video_title" name="video_title" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required>
+                                <p class="text-red-500 text-sm mt-1 hidden" id="error-video_title">영상 제목을 입력해주세요.</p>
+                            </div>
+                            <div class="mb-6">
+                                <label for="video_description" class="block mb-2 font-semibold">영상 설명 및 요구사항 <span class="text-red-500">*</span></label>
+                                <textarea id="video_description" name="video_description" rows="4" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required></textarea>
+                                <p class="text-red-500 text-sm mt-1 hidden" id="error-video_description">영상 설명 및 요구사항을 입력해주세요.</p>
+                            </div>
+    
+                            <!-- Dynamic URL Fields -->
+                            <div class="mb-6">
+                                <label class="block mb-2 font-semibold">원본 소스 파일 URL <span class="text-red-500">*</span></label>
+                                <div id="source-urls-container">
+                                    <div class="flex items-center mb-2">
+                                        <input type="url" name="source_files[]" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" required>
+                                        <button type="button" class="add-url-btn ml-2 bg-bitbuzz-blue text-white px-3 py-2 rounded-full"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="mb-6">
+                                <label class="block mb-2 font-semibold">레퍼런스 영상/채널 URL</label>
+                                <div id="reference-urls-container">
+                                    <div class="flex items-center mb-2">
+                                        <input type="url" name="reference_videos[]" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue">
+                                        <button type="button" class="add-url-btn ml-2 bg-bitbuzz-blue text-white px-3 py-2 rounded-full"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="mb-6">
+                                <label for="order_quantity" class="block mb-2 font-semibold">주문 수량 (최소 4개) <span class="text-red-500">*</span></label>
+                                <input type="number" id="order_quantity" name="order_quantity" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue" min="4" value="4" required>
+                                <p class="text-red-500 text-sm mt-1 hidden" id="error-order_quantity">최소 주문 수량은 4개입니다.</p>
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-xl font-bold">총 가격: <span id="total_price" class="text-bitbuzz-blue">₩30,000</span></p>
+                            </div>
+                            <div class="mb-6">
+                                <label for="capcut_project_url" class="block mb-2 font-semibold">캡컷 프로젝트 공유 URL (선택사항)</label>
+                                <input type="url" id="capcut_project_url" name="capcut_project_url" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue">
+                                <p class="text-red-500 text-sm mt-1 hidden" id="error-capcut_project_url">유효한 URL 주소를 입력해주세요.</p>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full bg-bitbuzz-yellow text-bitbuzz-blue font-bold py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors">
+                                <span id="btn-text">주문하기</span>
+                                <i id="btn-spinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Modal -->
+                        <div id="success-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
+                            <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-md w-full">
+                                <div class="flex justify-center mb-4">
+                                    <i class="fas fa-check-circle text-green-500 text-6xl animate-bounce"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">주문이 성공적으로 접수되었습니다!</h3>
+                                <p class="text-gray-600 mb-6">신속하게 확인 후 연락드리겠습니다. 감사합니다.</p>
+                                <div class="p-4 bg-gray-100 rounded-lg">
+                                    <p class="font-bold text-sm text-gray-700">총 결제 금액: <span id="modal-total-price"></span></p>
+                                    <p class="font-bold text-sm text-gray-700">결제 계좌: 하나은행 200-910260-58107 김의종</p>
+                                    <button onclick="copyToClipboard('200-910260-58107')" class="mt-2 text-bitbuzz-blue text-sm hover:underline">계좌번호 복사하기</button>
+                                </div>
+                                <button id="close-modal-btn" class="mt-6 bg-bitbuzz-blue text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 BitbuZz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel, onSnapshot, query, orderBy, getDocs, doc, updateDoc, where } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        // Firebase configuration and initialization
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        let userId = null;
+        let isAuthReady = false;
+
+        setLogLevel('debug'); // For debugging purposes
+
+        // DOM Elements
+        const mainContent = document.getElementById('main-content');
+        const orderFormContent = document.getElementById('order-form-content');
+        const adminContent = document.getElementById('admin-content');
+
+        const navMain = document.getElementById('nav-main');
+        const navServices = document.getElementById('nav-services');
+        const navOrder = document.getElementById('nav-order');
+        const navAdmin = document.getElementById('nav-admin');
+
+        const mobileNavServices = document.getElementById('mobile-nav-services');
+        const mobileNavOrder = document.getElementById('mobile-nav-order');
+        const mobileNavAdmin = document.getElementById('mobile-nav-admin');
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const form = document.getElementById('orderForm');
+        const quantityInput = document.getElementById('order_quantity');
+        const totalPriceSpan = document.getElementById('total_price');
+        const sourceUrlsContainer = document.getElementById('source-urls-container');
+        const referenceUrlsContainer = document.getElementById('reference-urls-container');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnSpinner = document.getElementById('btn-spinner');
+        const modalTotalPriceSpan = document.getElementById('modal-total-price');
+
+        // Admin page elements
+        const adminUserIdDisplay = document.getElementById('admin-user-id');
+        const ordersList = document.getElementById('orders-list');
+        const paginationControls = document.getElementById('pagination-controls');
+        const orderSearchInput = document.getElementById('order-search');
+        const statusFilterSelect = document.getElementById('status-filter');
+        let currentPage = 1;
+        const itemsPerPage = 10;
+        let allOrders = [];
+
+        // Functions
+        function showPage(pageId) {
+            mainContent.classList.add('hidden');
+            orderFormContent.classList.add('hidden');
+            adminContent.classList.add('hidden');
+
+            if (pageId === 'main') {
+                mainContent.classList.remove('hidden');
+            } else if (pageId === 'order') {
+                orderFormContent.classList.remove('hidden');
+            } else if (pageId === 'admin') {
+                adminContent.classList.remove('hidden');
+                // Load admin data when the admin page is shown
+                if (isAuthReady) {
+                    loadAdminOrders();
+                } else {
+                    showModalMessage('인증 오류', '관리자 페이지에 접근하려면 인증이 필요합니다. 잠시 후 다시 시도해 주세요.');
+                }
+            }
+        }
+        
+        function calculatePrice() {
+            const quantity = parseInt(quantityInput.value, 10) || 0;
+            const price = 7500;
+            const total = quantity * price;
+            totalPriceSpan.textContent = `₩${total.toLocaleString()}`;
+        }
+        
+        function addUrlField(container, name, required = false) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'flex items-center mb-2';
+            const input = document.createElement('input');
+            input.type = 'url';
+            input.name = name;
+            input.className = 'w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-bitbuzz-blue';
+            if (required) {
+                input.required = true;
+            }
+            const addBtn = document.createElement('button');
+            addBtn.type = 'button';
+            addBtn.className = 'add-url-btn ml-2 bg-bitbuzz-blue text-white px-3 py-2 rounded-full';
+            addBtn.innerHTML = '<i class="fas fa-plus"></i>';
+        
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'remove-url-btn ml-2 bg-red-500 text-white px-3 py-2 rounded-full';
+            removeBtn.innerHTML = '<i class="fas fa-minus"></i>';
+        
+            wrapper.appendChild(input);
+            wrapper.appendChild(addBtn);
+            wrapper.appendChild(removeBtn);
+            container.appendChild(wrapper);
+        
+            addBtn.addEventListener('click', () => addUrlField(container, name, required));
+            removeBtn.addEventListener('click', () => {
+                if (container.children.length > 1) {
+                    container.removeChild(wrapper);
+                }
+            });
+        }
+        
+        // This function has been updated to be more forgiving.
+        function validateForm() {
+            let isValid = true;
+            const requiredFields = ['customer_name', 'customer_email', 'customer_contact', 'video_title', 'video_description'];
+            
+            // Validate required text fields
+            requiredFields.forEach(id => {
+                const input = document.getElementById(id);
+                const error = document.getElementById(`error-${id}`);
+                if (!input.value.trim()) {
+                    error.classList.remove('hidden');
+                    // isValid = false; // "관대하게" 요청에 따라 제출을 막지 않음
+                } else {
+                    error.classList.add('hidden');
+                }
+            });
+        
+            // Validate email format
+            const emailInput = document.getElementById('customer_email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.value.trim() && !emailRegex.test(emailInput.value.trim())) {
+                document.getElementById('error-customer_email').classList.remove('hidden');
+                document.getElementById('error-customer_email').textContent = '유효한 이메일 주소를 입력해주세요.';
+                // isValid = false;
+            } else {
+                // error.classList.add('hidden')는 이미 위에서 처리됨
+            }
+        
+            // Validate quantity
+            const quantity = parseInt(quantityInput.value, 10);
+            const quantityError = document.getElementById('error-order_quantity');
+            if (quantity < 4 || isNaN(quantity)) {
+                quantityError.classList.remove('hidden');
+                // isValid = false;
+            } else {
+                quantityError.classList.add('hidden');
+            }
+        
+            // Validate dynamic source URLs
+            const sourceUrls = form.querySelectorAll('#source-urls-container input[type="url"]');
+            let hasSourceUrl = false;
+            sourceUrls.forEach(input => {
+                if (input.value.trim()) {
+                    hasSourceUrl = true;
+                }
+                const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                if (input.value.trim() && !urlRegex.test(input.value.trim())) {
+                    input.classList.add('border-red-500');
+                    // isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            // 소스 URL이 하나도 없으면 경고 모달 표시 (제출은 가능)
+            if (!hasSourceUrl) {
+                showModalMessage('필수 정보 누락', '최소 1개의 원본 소스 파일 URL을 입력해주세요.');
+            }
+        
+            // Validate dynamic reference URLs
+            const referenceUrls = form.querySelectorAll('#reference-urls-container input[type="url"]');
+            referenceUrls.forEach(input => {
+                const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                if (input.value.trim() && !urlRegex.test(input.value.trim())) {
+                    input.classList.add('border-red-500');
+                    // isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+        
+            return true;
+        }
+
+        // Admin Functions
+        function renderOrders(page) {
+            ordersList.innerHTML = '';
+            const filteredOrders = allOrders.filter(order => {
+                const search = orderSearchInput.value.toLowerCase();
+                const status = statusFilterSelect.value;
+                const matchesSearch = (order.customer_name || '').toLowerCase().includes(search) || (order.customer_email || '').toLowerCase().includes(search);
+                const matchesStatus = status === 'all' || order.status === status;
+                return matchesSearch && matchesStatus;
+            });
+            
+            const totalPages = Math.ceil(filteredOrders.length / itemsPerPage);
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const ordersToDisplay = filteredOrders.slice(start, end);
+            
+            if (ordersToDisplay.length === 0) {
+                ordersList.innerHTML = '<div class="text-center text-gray-500 py-10"><p>조건에 맞는 주문이 없습니다.</p></div>';
+            } else {
+                ordersToDisplay.forEach(order => {
+                    const orderItem = document.createElement('div');
+                    orderItem.className = 'bg-gray-50 p-6 rounded-lg shadow-sm border-l-4 border-bitbuzz-blue flex flex-col md:flex-row justify-between items-start md:items-center';
+                    const createdAt = order.created_at ? new Date(order.created_at.seconds * 1000).toLocaleString() : '정보 없음';
+                    const updatedAt = order.updated_at ? new Date(order.updated_at.seconds * 1000).toLocaleString() : '정보 없음';
+
+                    orderItem.innerHTML = `
+                        <div class="flex-1 md:pr-4">
+                            <h4 class="text-lg font-bold">${order.video_title || '제목 없음'}</h4>
+                            <p class="text-sm text-gray-600">주문자: ${order.customer_name || '정보 없음'} (${order.customer_email || '정보 없음'})</p>
+                            <p class="text-sm text-gray-600">수량: ${order.order_quantity}개 | 총 가격: ₩${order.total_price.toLocaleString()}</p>
+                            <div class="mt-2 text-xs text-gray-400">
+                                <p>생성일: ${createdAt}</p>
+                                <p>업데이트일: ${updatedAt}</p>
+                            </div>
+                            <button class="toggle-details mt-2 text-bitbuzz-blue text-sm">상세정보 보기</button>
+                            <div class="order-details mt-4 text-sm text-gray-700 hidden">
+                                <p><strong>카톡 ID:</strong> ${order.customer_contact || '없음'}</p>
+                                <p><strong>영상 설명:</strong> ${order.video_description || '없음'}</p>
+                                <p><strong>원본 URL:</strong> ${JSON.parse(order.source_files || '[]').join(', ') || '없음'}</p>
+                                <p><strong>레퍼런스 URL:</strong> ${JSON.parse(order.reference_videos || '[]').join(', ') || '없음'}</p>
+                                <p><strong>캡컷 URL:</strong> ${order.capcut_project_url || '없음'}</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex flex-col items-start md:items-end">
+                            <select class="status-select px-3 py-1 rounded-lg border-2 text-sm font-semibold" data-id="${order.id}">
+                                <option value="대기중" ${order.status === '대기중' ? 'selected' : ''}>대기중</option>
+                                <option value="진행중" ${order.status === '진행중' ? 'selected' : ''}>진행중</option>
+                                <option value="완료됨" ${order.status === '완료됨' ? 'selected' : ''}>완료됨</option>
+                            </select>
+                        </div>
+                    `;
+                    ordersList.appendChild(orderItem);
+                });
+            }
+            renderPagination(totalPages, page);
+        }
+
+        function renderPagination(totalPages, currentPage) {
+            paginationControls.innerHTML = '';
+            if (totalPages > 1) {
+                for (let i = 1; i <= totalPages; i++) {
+                    const button = document.createElement('button');
+                    button.textContent = i;
+                    button.className = `mx-1 px-3 py-1 rounded-lg font-semibold ${i === currentPage ? 'bg-bitbuzz-blue text-white' : 'bg-gray-200 text-gray-700'}`;
+                    button.addEventListener('click', () => {
+                        currentPage = i;
+                        renderOrders(currentPage);
+                    });
+                    paginationControls.appendChild(button);
+                }
+            }
+        }
+        
+        async function loadAdminOrders() {
+            if (!userId) {
+                ordersList.innerHTML = '<div class="text-center text-gray-500 py-10"><p>사용자 인증이 필요합니다. 잠시 후 다시 시도해 주세요.</p></div>';
+                return;
+            }
+            
+            adminUserIdDisplay.textContent = userId;
+            const q = query(collection(db, `/artifacts/${appId}/users/${userId}/orders`));
+            
+            // Listen for real-time updates
+            onSnapshot(q, (querySnapshot) => {
+                allOrders = [];
+                querySnapshot.forEach((doc) => {
+                    allOrders.push({ id: doc.id, ...doc.data() });
+                });
+                
+                // Sort by created_at in descending order, handling null values
+                allOrders.sort((a, b) => {
+                    const timeA = a.created_at?.seconds || 0;
+                    const timeB = b.created_at?.seconds || 0;
+                    return timeB - timeA;
+                });
+                
+                renderOrders(currentPage);
+            }, (error) => {
+                console.error("Error fetching orders: ", error);
+                ordersList.innerHTML = `<div class="text-center text-red-500 py-10"><p>주문을 불러오는 중 오류가 발생했습니다.</p><p>${error.message}</p></div>`;
+            });
+        }
+        
+        async function updateOrderStatus(orderId, newStatus) {
+            if (!userId) {
+                console.error("Authentication required to update order status.");
+                return;
+            }
+            try {
+                const docPath = `/artifacts/${appId}/users/${userId}/orders/${orderId}`;
+                await updateDoc(doc(db, docPath), {
+                    status: newStatus,
+                    updated_at: serverTimestamp()
+                });
+                console.log("Order status updated successfully!");
+            } catch (error) {
+                console.error("Error updating order status:", error);
+                showModalMessage("오류", "주문 상태를 업데이트하는 중 오류가 발생했습니다.");
+            }
+        }
+
+        // Event Listeners
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navMain.addEventListener('click', (e) => { e.preventDefault(); showPage('main'); });
+        navServices.addEventListener('click', (e) => { e.preventDefault(); showPage('main'); });
+        navOrder.addEventListener('click', (e) => { e.preventDefault(); showPage('order'); });
+        navAdmin.addEventListener('click', (e) => { e.preventDefault(); showPage('admin'); });
+
+        mobileNavServices.addEventListener('click', (e) => { e.preventDefault(); showPage('main'); mobileMenu.classList.add('hidden'); });
+        mobileNavOrder.addEventListener('click', (e) => { e.preventDefault(); showPage('order'); mobileMenu.classList.add('hidden'); });
+        mobileNavAdmin.addEventListener('click', (e) => { e.preventDefault(); showPage('admin'); mobileMenu.classList.add('hidden'); });
+
+        quantityInput.addEventListener('input', calculatePrice);
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // 데이터 수집
+            const formData = new FormData(form);
+            const sourceFiles = formData.getAll('source_files[]');
+            const referenceVideos = formData.getAll('reference_videos[]');
+
+            const orderData = {
+                customer_name: formData.get('customer_name') || '',
+                customer_email: formData.get('customer_email') || '',
+                customer_contact: formData.get('customer_contact') || '',
+                video_title: formData.get('video_title') || '',
+                video_description: formData.get('video_description') || '',
+                source_files: JSON.stringify(sourceFiles.filter(url => url.trim() !== '')),
+                reference_videos: JSON.stringify(referenceVideos.filter(url => url.trim() !== '')),
+                order_quantity: parseInt(formData.get('order_quantity'), 10) || 0,
+                total_price: (parseInt(formData.get('order_quantity'), 10) || 0) * 7500,
+                capcut_project_url: formData.get('capcut_project_url') || '',
+                status: '대기중',
+                created_at: serverTimestamp(),
+                updated_at: serverTimestamp(),
+                notes: '',
+                progress_notes: ''
+            };
+            
+            // 제출 로직
+            if (!userId) {
+                console.error("User not authenticated. Please wait and try again.");
+                showModalMessage("사용자 인증 오류", "잠시 후 다시 시도해 주세요.");
+                return;
+            }
+
+            btnText.textContent = '처리 중...';
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            try {
+                const collectionPath = `/artifacts/${appId}/users/${userId}/orders`;
+                const docRef = await addDoc(collection(db, collectionPath), orderData);
+                console.log("Document written with ID: ", docRef.id);
+                
+                // 폼 초기화
+                form.reset();
+                calculatePrice();
+                
+                // 모달에 총 가격 업데이트
+                modalTotalPriceSpan.textContent = `₩${orderData.total_price.toLocaleString()}`;
+                successModal.classList.remove('hidden');
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showModalMessage("오류 발생", "주문 중 오류가 발생했습니다. 다시 시도해 주세요.");
+            } finally {
+                btnText.textContent = '주문하기';
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+
+        // 폼 입력 시 데이터 유지 로직
+        const formFields = form.querySelectorAll('input, textarea');
+        formFields.forEach(field => {
+            field.addEventListener('input', () => {
+                localStorage.setItem(field.id, field.value);
+            });
+        });
+
+        // 페이지 로드 시 데이터 복구 로직
+        window.addEventListener('load', () => {
+            formFields.forEach(field => {
+                if (localStorage.getItem(field.id)) {
+                    field.value = localStorage.getItem(field.id);
+                }
+            });
+            calculatePrice();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+
+        ordersList.addEventListener('click', (e) => {
+            if (e.target.classList.contains('toggle-details')) {
+                const details = e.target.nextElementSibling;
+                details.classList.toggle('hidden');
+                e.target.textContent = details.classList.contains('hidden') ? '상세정보 보기' : '상세정보 숨기기';
+            }
+        });
+
+        ordersList.addEventListener('change', (e) => {
+            if (e.target.classList.contains('status-select')) {
+                const orderId = e.target.dataset.id;
+                const newStatus = e.target.value;
+                updateOrderStatus(orderId, newStatus);
+            }
+        });
+
+        orderSearchInput.addEventListener('input', () => {
+            currentPage = 1;
+            renderOrders(currentPage);
+        });
+
+        statusFilterSelect.addEventListener('change', () => {
+            currentPage = 1;
+            renderOrders(currentPage);
+        });
+
+        // Authentication and data loading
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                userId = user.uid;
+                isAuthReady = true;
+                console.log("User authenticated with ID:", userId);
+            } else {
+                try {
+                    console.log("Signing in anonymously...");
+                    const userCredential = await signInAnonymously(auth);
+                    userId = userCredential.user.uid;
+                    isAuthReady = true;
+                } catch (error) {
+                    console.error("Anonymous sign-in failed:", error);
+                }
+            }
+        });
+
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+            signInWithCustomToken(auth, __initial_auth_token).then((userCredential) => {
+                userId = userCredential.user.uid;
+                isAuthReady = true;
+                console.log("Signed in with custom token. User ID:", userId);
+            }).catch((error) => {
+                console.error("Error signing in with custom token:", error);
+            });
+        }
+        
+        function showModalMessage(title, message) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50';
+            modal.innerHTML = `
+                <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-md w-full">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">${title}</h3>
+                    <p class="text-gray-600 mb-6">${message}</p>
+                    <button class="bg-bitbuzz-blue text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">확인</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.querySelector('button').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+        }
+        
+        // Function to copy text to clipboard
+        window.copyToClipboard = (text) => {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+        };
+    </script>
+</body>
+</html>
